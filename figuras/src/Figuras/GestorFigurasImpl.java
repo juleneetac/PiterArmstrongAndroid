@@ -1,4 +1,4 @@
 package Figuras;
 
-public class GestorFigurasImpl {
+public class GestorFigurasImpl implements GestorFiguras {
 }
