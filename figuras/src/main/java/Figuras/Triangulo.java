@@ -1,4 +1,5 @@
 package Figuras;
+import java.util.*;
 
 public class Triangulo extends Figuras {
     private double base;
@@ -8,7 +9,7 @@ public class Triangulo extends Figuras {
         base = base1;
         altura = altura1;
     }
-    public double area(){
-        return base*altura;
+    public double getArea(){
+        return (base*altura)/2;
     }
 }

@@ -1,4 +1,5 @@
 package Figuras;
+import java.util.*;
 
 public class Rectangulo extends Figuras {
     private double base;
@@ -8,7 +9,7 @@ public class Rectangulo extends Figuras {
         base = base1;
         altura = altura1;
     }
-    public double area(){
+    public double getArea(){
         return base*altura;
     }
 }

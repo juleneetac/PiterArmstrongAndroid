@@ -1,5 +1,5 @@
 package Figuras;
-
+import java.util.*;
 public class Circulo extends Figuras {
     private double radio;
     private double diametro;
@@ -8,7 +8,7 @@ public class Circulo extends Figuras {
         radio = radio1;
         diametro = radio1*2;
     }
-    public double area(){
+    public double getArea(){
         return Math.PI*(radio*radio);
     }
 }
