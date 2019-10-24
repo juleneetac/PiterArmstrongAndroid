@@ -6,7 +6,7 @@ public class GestorProductosImpl implements GestorProductos {
     private Queue<Pedido> pedidos;
 
 
-    private GestorProductosImpl(){
+    protected GestorProductosImpl(){
         this.productos = new ArrayList<Producto>();
         this.pedidos = new LinkedList<Pedido>();
         this.users = new HashMap<>();
@@ -29,20 +29,26 @@ public class GestorProductosImpl implements GestorProductos {
     }
 
     public void anotarPedido (String id, Pedido c){ //2 //ID ALOMEJOR INNECESARIO
-        LinkedList<Pedido> pedidos = null;
-        User theUser = this.users.get(id);
-
-        if(theUser!=null){
-            pedidos = theUser.Pedido(); //CAMBIAR TIPO Y SE VA ERROR?
-            pedidos.add(c);
-        }
-        else{
-            this.users.put(id, new User(id, this.pedidos));
-            pedidos.add(c);
+        c.addIdUser(id);
+        pedidos.add(c);
         }
 
     }
     public void servirPedido(){ //3
+        Pedido pedido = pedidos.peek();
+        String producto;
+        for (Pedido.LP lp: pedido.getLPs()){
+            producto = lp.getProducto();
+            Producto prod = getProducto(producto);
+            prod.updateNumVendes (lp.getQ());
+        }
+
+        User theUser = this.users.get(pedido.getidUser());
+
+        if(theUser!=null) {
+           theUser.addPedido(pedido);
+        }
+
 
     }
     public List<Producto> productOrdVentas(){ //4
