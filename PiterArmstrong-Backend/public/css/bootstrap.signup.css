@@ -1,0 +1,43 @@
+body{
+    background-image: url(../imagenes/logo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+.container{
+    margin-top: 150px;
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    height: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 370px;
+    background-color: rgba(0, 0, 0, 0.603) !important;
+    align-items: center;
+    
+    }
+
+.card-header h3{
+    color: white;
+    
+}
+
+.links{
+    color: white;
+}
+
+.links a{
+    margin-left: 4px;
+    color: rgba(0, 204, 255, 0.747);
+}
+
+.login_btn {
+    width: 100%;
+    background:rgba(0, 204, 255, 0.747) !important;
+    color: white !important;
+}

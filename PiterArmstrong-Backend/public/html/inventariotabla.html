@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <meta charset="utf-8">
+    <title>Inventario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../css/bootstrap.inventariotabla.css" >
+    <link rel="stylesheet" href= "../css/bootstrap.min.css" >
+    <link rel="shortcut icon" href="../imagenes/casco.png" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- <script type="text/javascript" src="../js/bootstrap.inventario.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index2.html">
+        <img src="../imagenes/casco.png" alt="" style="width:40px;" href="index2.html">
+        <img src="../imagenes/piter.png" alt="" style="width:160px;" href="index2.html">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Inventario</a>
+            <li class="nav-item">
+                <a class="nav-link" href="accountmanagement.html"> Atrás </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Inventario</h1>
+    <div class="btn-group">
+        <button type="button" id="username" class="btn user-btn"><script type ="text/javascript">
+            document.getElementById("username").innerHTML = window.localStorage.getItem("username");
+          </script></button>
+    </div>
+    <h1>:</h1>
+
+    <script>
+    $(document).ready(function(){
+            $("#login").click(function(){
+                $('table tbody').empty();
+                $.get("http://localhost:8080/dsaApp/usermanager/users/" + $("#user").val()+ "/objects", function(Array, status) {
+                    for (var i = 0; i < Array.length; i++) {
+                        var Object= Array.shift();
+                        $("table").append("<tr><td>"+Object.nombre+ "</td><td>"+Object.coste+"</td></tr>");}
+                });
+            });
+        });
+
+
+
+        </script>
+    <div class="input-group form-group">
+        <input type="text" class="username" id="user" placeholder="Nombre de usuario"  name="username" required>
+    </div>
+    <div class="form-group">
+        <button type="button" name="button" id="login" class="btn login_btn">Buscar</button>
+    </div>
+    <br>
+    <br>
+
+    <div class="tables">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Coste</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

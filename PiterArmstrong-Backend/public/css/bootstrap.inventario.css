@@ -1,0 +1,28 @@
+body{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;  
+}
+
+.precio-btn{
+    
+    width: 80px;
+    color: black;
+    background-color: white;
+    align-content:center;
+
+}
+.comprar-btn{
+    width: 110px;
+    background-color: rgba(0, 204, 255, 0.747) ;
+    color: white;
+
+}
+.image{
+    display: block;
+    margin:auto;
+}
+.container{
+    margin-top: 20px;
+}

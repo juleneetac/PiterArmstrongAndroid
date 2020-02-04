@@ -1,0 +1,32 @@
+body{
+    background-image: url(../imagenes/fondo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+h1{
+    color: white;
+    text-align: center;
+}
+p{
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.info{
+    height: 200px;
+    width: 100%;
+}
+h6{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.699);
+}
+h2{
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.juego{
+position: center;
+height: 500 px;
+width: 100%;
+}

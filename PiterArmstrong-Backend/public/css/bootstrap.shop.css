@@ -1,0 +1,32 @@
+body{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;  
+}
+
+.precio-btn{
+    background-image: url(../imagenes/coin.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: center;
+    width: 100px;
+    color: black;
+    background-color: white;
+    align-content:center;
+
+}
+
+.comprar-btn{
+    width: 130px;
+    background-color: rgba(0, 204, 255, 0.747) ;
+    color: white;
+
+}
+.image{
+    display: block;
+    margin:auto;
+}
+.container{
+    margin-top: 20px;
+}

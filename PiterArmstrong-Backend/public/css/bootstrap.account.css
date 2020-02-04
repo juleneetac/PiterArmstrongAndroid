@@ -1,0 +1,25 @@
+body{
+    background-image: url(../imagenes/1077818377.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+h2{
+    color: white;
+}
+
+h6{
+    color: white;
+}
+
+.jumbotron{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.658);  
+    margin-bottom: 0;
+}
+
+.nav-link{
+    color:white;
+}

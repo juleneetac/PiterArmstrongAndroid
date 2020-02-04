@@ -1,0 +1,28 @@
+.container{
+    margin-top: 80px;
+}
+h1{
+    display: inline;
+}
+
+.user-btn{
+    background-color: white;
+    width: 50px;
+    height: 24px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+.tables{
+background-color:rgba(0, 204, 255, 0.747);
+align-content: center;
+}
+
+.login_btn {
+    background:rgba(0, 204, 255, 0.747) !important;
+    color: black !important;
+
+}
